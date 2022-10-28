@@ -1,0 +1,20 @@
+html:
+ 2 id for 2 players and respective images/icons of rock, paper or scissors.
+ area for choosing .
+ and 2 ids for scores.
+
+css:
+ Align items in center somehow.
+ add styles and glass effects from a generator.
+
+js: (gonna set id's while I actually start to code, you do the same)
+declare imp variables like players & their resp. scores and an array of 3 choices.
+when page loads write script to loop n fill the img choices area for us to select, (onload() w3school)).
+add event listener on your selected img. and store the index from the array.
+and based on index and append src our img in game area.
+*I tried to come up with a logic for selecting winner,
+but didn't worked out, so gonna use someone elses logi and try to inder starnd it!!
+I made an if-else mess!!!
+*Well I found someone's logic and used that...
+After that keep track of course and set the resp. scores
+by innerTEXT.
