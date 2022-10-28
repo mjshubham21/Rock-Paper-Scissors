@@ -18,3 +18,6 @@ I made an if-else mess!!!
 *Well I found someone's logic and used that...
 After that keep track of course and set the resp. scores
 by innerTEXT.
+
+git:
+git remote set ur; is sooo important.
