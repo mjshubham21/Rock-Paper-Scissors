@@ -34,11 +34,11 @@ function computer() {
 function winner() {
   if (p1 == p2) {
     return "Draw !";
-  } else if ((p2 = "ROCK")) {
+  } else if (p2 == "ROCK") {
     return p1 == "PAPER" ? "Congrats !! 🎉🎉" : "You Lose!!";
-  } else if ((p2 = "PAPER")) {
+  } else if (p2 == "PAPER") {
     return p1 == "SCISSORS" ? "Congrats !! 🎉🎉" : "You Lose!!";
-  } else if ((p2 = "SCISSORS")) {
+  } else if (p2 == "SCISSORS") {
     return p1 == "ROCK" ? "Congrats !! 🎉🎉" : "You Lose!!";
   }
 }
