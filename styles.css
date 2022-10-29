@@ -74,12 +74,10 @@ h1 {
   background-color: black;
   color: aliceblue;
 }
-
 a {
   text-decoration: none;
   color: black;
 }
-
 a:hover {
-  color: aliceblue;
+  color: rgb(255, 255, 255);
 }
