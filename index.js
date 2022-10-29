@@ -1,53 +1,44 @@
-var you,
-  yourScore = 0,
-  opp,
-  oppScore,
-  choices = ["rock", "paper", "scissors"];
+const p1score = document.querySelector("#p1-score");
+const p2score = document.querySelector("#p2-score");
+const resultText = document.querySelector("#result");
+const choiceBtns = document.querySelectorAll(".choice");
 
-window.onload = function () {
-  for (let i = 0; i < 3; i++) {
-    let choice = document.createElement("img");
-    choice.id = choices[i];
-    choice.src = choices[i] + ".png";
-    choice.addEventListener("click", selectChoice);
-    document.getElementById("choices").append(choice);
+let p1, p2, result;
+
+choiceBtns.forEach((button) =>
+  button.addEventListener("click", () => {
+    p1 = button.textContent;
+    computer(); //random of the 3.
+    p1score.textContent = `Player:- ${p1}`;
+    p2score.textContent = `Computer:- ${p2}`;
+    resultText.textContent = winner();
+  })
+);
+
+function computer() {
+  const rnum = Math.floor(Math.random() * 3 + 1);
+
+  switch (rnum) {
+    case 1:
+      p2 = "ROCK";
+      break;
+    case 2:
+      p2 = "PAPER";
+      break;
+    case 3:
+      p2 = "SCISSORS";
+      break;
   }
-};
+}
 
-function selectChoice() {
-  you = this.id;
-  document.getElementById("p2-choice").src = you + ".png";
-
-  //random for oppponent
-  opp = choices[Math.floor(Math.random() * 3)]; //0- .999999 * 3 = 0-2.99999
-  document.getElementById("p1-choice").src = opp + ".png";
-
-  //check for winner
-  if (you == opp) {
-    yourScore = yourScore;
-    oppScore = oppScore;
-  } else {
-    if (you == "rock") {
-      if (opp == "scissors") {
-        yourScore += 1;
-      } else if (opp == "paper") {
-        oppScore += 1;
-      }
-    } else if (you == "scissors") {
-      if (opp == "paper") {
-        yourScore += 1;
-      } else if (opp == "rock") {
-        oppScore += 1;
-      }
-    } else if (you == "paper") {
-      if (opp == "rock") {
-        yourScore += 1;
-      } else if (opp == "scissors") {
-        oppScore += 1;
-      }
-    }
+function winner() {
+  if (p1 == p2) {
+    return "Draw !";
+  } else if ((p2 = "ROCK")) {
+    return p1 == "PAPER" ? "Congrats !! 🎉🎉" : "You Lose!!";
+  } else if ((p2 = "PAPER")) {
+    return p1 == "SCISSORS" ? "Congrats !! 🎉🎉" : "You Lose!!";
+  } else if ((p2 = "SCISSORS")) {
+    return p1 == "ROCK" ? "Congrats !! 🎉🎉" : "You Lose!!";
   }
-
-  document.getElementById("p2-score").innerText = yourScore;
-  document.getElementById("p1-score").innerText = oppScore;
 }
