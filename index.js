@@ -9,7 +9,7 @@ choiceBtns.forEach((button) =>
   button.addEventListener("click", () => {
     p1 = button.textContent;
     computer(); //random of the 3.
-    p1score.textContent = `Player:- ${p1}`;
+    p1score.textContent = `You:- ${p1}`;
     p2score.textContent = `Computer:- ${p2}`;
     resultText.textContent = winner();
   })
